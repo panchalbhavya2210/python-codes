@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form  action="/fetch" method="post">{% csrf_token %}
+    <label>Name</label>
+    <input type="text" required name="uname"><br>
+    <label>Email</label>
+    <input type="email" required name="uemail"><br>
+    <label>Phone</label>
+    <input type="tel" required name="uphone"><br>
+    <label>Address</label>
+    <input type="address" required name="address"><br>
+    <input type="submit">
+
+
+<table>
+    {% if USERNAME %}
+    <tr>
+        <td>{{USERNAME}}</td>
+    </tr>
+    <tr>
+        <td>{{USEREMAIL}}</td>
+    </tr>
+    <tr>
+        <td>{{USERPHONE}}</td>
+    </tr>
+    <tr>
+        <td>{{USERADDRESS}}</td>
+    </tr>
+    {% else %}
+    <tr>
+        <td>Please from bhar do bhai...</td>
+    </tr>
+    {% endif %}
+</table>
+</form>
+</body>
+</html>
