@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peoples</title>
+  </head>
+  <body>
+    {% for people in peopledata %}
+    <div>{{ people.email }}</div>
+    {% endfor %}
+  </body>
+</html>

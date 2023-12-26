@@ -4,6 +4,10 @@ from .models import registerUser
 
 # Create your views here.
 
+def fetchData(request):
+    data=registerUser.objects.all()
+    return render(request, 'showpeople.html', {"peopledata": data})
+
 def index(request):
     return render(request, 'index.html')
 
